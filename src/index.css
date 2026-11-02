@@ -1,0 +1,46 @@
+/* ایمپورت فونت‌ها باید اول بیاد */
+@import './styles/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  direction: rtl;
+  font-family: 'Shabnam', 'Tahoma', sans-serif;
+  
+}
+#root {
+  background-color: #33635E; /* فضای اضافی با این رنگ پر شود */
+  background-image: url('/assets/img/NOWait-bg.png');
+  background-size: cover;       /* تصویر کل عرض صفحه را بپوشاند */
+  background-position: top center; /* تصویر از بالا شروع شود */
+  background-repeat: no-repeat; /* تصویر تکرار نشود */
+  min-height: 100vh;
+}
+
+/* 📱 فقط برای موبایل */
+@media (max-width: 1024px) {
+  html, body, #root {
+    height: auto; 
+    min-height: 100vh;
+  }
+
+  #root {
+    background:
+      linear-gradient(135deg, #183431 0%, #33635E 50%, #183431 100%),
+      url('/assets/img/BackGround-NOWait-Mobile-1.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; 
+    background-blend-mode: soft-light;
+  }
+}
